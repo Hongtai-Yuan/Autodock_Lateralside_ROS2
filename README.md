@@ -21,21 +21,16 @@ ros2 launch apriltag_docking autodock_gazebo.launch.py open_rviz:=true
 ros2 run apriltag_docking docking_client --ros-args -p docking:=start
 ```
 
-## Use Physical NeuronBot2 and RealSense D435
-
-Below instructions are only for users having a real NeuronBot2 with RealSense D435
-
-Step 1. Launch Neuronbot2 and RealSense in real world
+## Use Physical Robot and Camera
 
 ```bash
 git clone https://github.com/Hongtai-Yuan/Autodock_Frontside_ROS2.git
-
 ros2 launch apriltag_docking autodock_neuronbot.launch.py open_rviz:=true
 ```
 
 Change Src And Include
-Use Autodock_Lateralside_ROS2 To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/src
-Use Autodock_Lateralside_ROS2 To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/include/
+Use Autodock_Lateralside_ROS2/src/apriltag_docking/autodock_controller/src/ To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/src
+Use Autodock_Lateralside_ROS2/src/apriltag_docking/autodock_controller/include/ To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/include/
 
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
@@ -60,3 +55,10 @@ source /opt/ros/humble/setup.bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_AUTODOCK=ON
 ros2 launch bt_ros2 bt_ros2.launch.py
 ```
+
+## Reference link
+https://github.com/Adlink-ROS/apriltag_docking
+
+https://github.com/Hongtai-Yuan/Autodock_Frontside_ROS2
+
+https://github.com/Hongtai-Yuan/Behavior_ROS2
