@@ -28,11 +28,10 @@ git clone https://github.com/Hongtai-Yuan/Autodock_Frontside_ROS2.git
 ros2 launch apriltag_docking autodock_neuronbot.launch.py open_rviz:=true
 ```
 
-## Change Src And Include
-## Use Autodock_Lateralside_ROS2/src/apriltag_docking/autodock_controller/src/ To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/src
-## Use Autodock_Lateralside_ROS2/src/apriltag_docking/autodock_controller/include/ To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/include/
-
+## Change Src And Include Then
 ```bash
+# Use Autodock_Lateralside_ROS2/src/apriltag_docking/autodock_controller/src/ To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/src
+# Use Autodock_Lateralside_ROS2/src/apriltag_docking/autodock_controller/include/ To Change Autodock_Frontside_ROS2/src/apriltag_docking/autodock_controller/include/
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ros2 launch apriltag_docking autodock_gazebo.launch.py open_rviz:=true
 ros2 run apriltag_docking docking_client --ros-args -p docking:=start
