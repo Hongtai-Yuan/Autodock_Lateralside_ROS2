@@ -1,5 +1,9 @@
 # Autodock_Lateralside_ROS2
 
+<p align="center">
+  <img src="readme1.gif" alt="说明文本">
+</p>
+
 ## Install dependencies
 ```bash
 cd ~/Autodock_Lateralside_ROS2/
