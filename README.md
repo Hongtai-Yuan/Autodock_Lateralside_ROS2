@@ -1,7 +1,7 @@
 # Autodock_Lateralside_ROS2
 
 <p align="center">
-  <img src="readme1.gif" alt="说明文本">
+  <img src="readmefiles.gif" alt="说明文本">
 </p>
 
 ## Install dependencies
